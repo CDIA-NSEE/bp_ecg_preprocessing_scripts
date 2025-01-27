@@ -88,13 +88,12 @@ def extract_pdf_slices_sequential(input_folder, boxes, error_folder):
 def extract_information(pdf_path, problems_folder):
     """Extract textual information from the first page of the PDF."""
     pdf_path = Path(pdf_path)
-    problems_folder = Path(problems_folder)  # ✅ Ensure this assignment happens properly
+    problems_folder = Path(problems_folder)
 
     doc = fitz.open(pdf_path)
     if len(doc) < 2:
         print(f"Moving {pdf_path.name} to Problems folder (only {len(doc)} page(s))")
         
-        # ✅ Ensure the directory exists before moving the file
         problems_folder.mkdir(parents=True, exist_ok=True)
         shutil.move(str(pdf_path), str(problems_folder / pdf_path.name))
         return None
