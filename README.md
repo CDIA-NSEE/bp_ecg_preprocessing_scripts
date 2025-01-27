@@ -2,7 +2,7 @@ __Documentação dos Scripts__
 
 **1.0.** Visão Geral:  
     Os scripts desse repositório tem como função principal tratar e organizar os exames presentes na base de dados da Benefiência Portuguesa.  
-Sua execução é fundamental para anonimização de cada exame e extrair informações julgadas relevantes para as próximas etapas do projeto de pesquisa.  
+Sua execução é fundamental para a anonimização de cada exame e extrair informações julgadas relevantes para as próximas etapas do projeto de pesquisa.  
 Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções de execução dos scripts.  
 
 **2.0.** Estrutura do Repositório:   
