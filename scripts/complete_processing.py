@@ -1,11 +1,5 @@
-import fitz  # PyMuPDF
-import re
 import os
-import pandas as pd
-import shutil
 import csv
-import tempfile
-from PIL import Image
 from utils import process_pdf, extract_information
 
 # Define folders
