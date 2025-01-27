@@ -1,0 +1,4 @@
+pillow 
+pymupdf
+pandas
+matplotlib

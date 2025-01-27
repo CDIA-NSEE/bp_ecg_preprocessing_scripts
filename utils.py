@@ -1,16 +1,8 @@
 import os
-import fitz
-import uuid
+import fitz  # PyMuPDF
 from PIL import Image
 import shutil
 import re
-import tempfile
-
-import os
-import shutil
-import uuid
-import fitz  # PyMuPDF
-from PIL import Image
 import tempfile
 
 def process_pdf(input_path, boxes, ERROR_FOLDER):
@@ -80,52 +72,6 @@ def extract_pdf_slices_sequential(input_folder, boxes, error_folder):
         process_pdf(input_path, boxes, error_folder)
 
     print("Completed processing all files.")
-
-def resize_images_in_folder(input_folder, output_folder, new_height):
-    # Ensure the output folder exists
-    os.makedirs(output_folder, exist_ok=True)
-
-    # Get a list of all files in the input folder
-    image_files = [f for f in os.listdir(input_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
-
-    if not image_files:
-        print("No image files found in the input folder.")
-        return
-
-    # Use the first image to calculate proportions
-    first_image_path = os.path.join(input_folder, image_files[0])
-    img = Image.open(first_image_path)
-    width, height = img.size
-    prop = width / height
-
-    # Calculate new width while preserving aspect ratio
-    new_width = int(new_height * prop)
-
-    print(f"Original Width: {width} pixels")
-    print(f"Original Height: {height} pixels")
-    print(f"Aspect Ratio (Width/Height): {prop:.2f}")
-    print(f"New Dimensions: {new_width}x{new_height}")
-
-    # Process each image
-    for image_file in image_files:
-        input_path = os.path.join(input_folder, image_file)
-
-        # Construct the output filename by replacing "processed" with "reduced"
-        base_name, ext = os.path.splitext(image_file)
-        if "_processed" in base_name:
-            base_name = base_name.replace("_processed", "")  # Remove "_processed"
-        output_file_name = f"{base_name}_reduced{ext}"  # Add "_reduced"
-        output_path = os.path.join(output_folder, output_file_name)
-
-        # Open the image
-        img = Image.open(input_path)
-
-        # Resize the image
-        resized_img = img.resize((new_width, new_height))
-
-        # Save the resized image to the output folder
-        resized_img.save(output_path)
-        print(f"Resized and saved: {output_path}")
 
 # Function to extract information from a PDF
 def extract_information(pdf_path, PROBLEMS_FOLDER):
