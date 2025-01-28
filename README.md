@@ -50,27 +50,27 @@ Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções
 =======
 📁 requirements.txt  
 Esse arquivo contém as bibliotecas com métodos e funções utilizados nos scripts, são elas, e suas funções:
-- pillow : Manipulação de imagens
-- pymupdf : Leitura e manipulação de arquivos PDF
-- pandas : Manipulação de dados estruturados
+- pillow: Manipulação de imagens.
+- pymupdf: Leitura e manipulação de arquivos PDF.
+- pandas: Manipulação de dados estruturados.
 
 📁 anonymization.py  
-Script responsável por anonimizar os nomes dos PDF's e gerar as seguintes saídas:
-- Exams_anonymized: pasta com os arquivos renomeados
-- file_mapping.csv: arquivo com mapeamento entre o nome antigo e novo de cada arquivo PDF    
+Script responsável por anonimizar os nomes dos PDFs:
+- Exams: pasta de entrada com os arquivos com o nome original.
+- Exams_anonymized: pasta de saída com os nomes dos arquivos anonimizados.
+- file_mapping.csv: arquivo com mapeamento entre o nome antigo e novo de cada arquivo PDF.    
 
 📁 utils.py  
 Contém funções auxiliares criadas para auxiliar no processamento dos PDF's
 - process_pdf: Processa um PDF, recorta regiões especificadas (como ECG, velocidade e amplitude), e salva como imagens.
 - extract_pdf_slices_sequential: Processa todos os PDF's em uma pasta, movendo arquivos com problemas para uma pasta de erros.
-- resize_images_in_folder: Redimensiona imagens em uma pasta mantendo a proporção.
 - extract_information: Extrai informações textuais específicas (data, hora, sexo, etc.) da primeira página de um PDF    
   
 📁 complete_processing.py  
 Script principal responsável por processar os dados, realizar recortes de imagens, e extrair informações textuais dos PDF's.
 Gera as seguintes saídas:
 - extract_information.csv: Arquivo .csv com todas as informações relevantes extraídas de cada exame, (["File", "Data", "Hora", "Sexo", "Data de Nascimento", "Laudo"])
-- ECG_Images, Amplitude, Speed: pastas contendo informações relevantes não convertidas para texto, ou seja, as imagens recortadas do ECG, e detalhes de amplitude e velocidade de cada exame
+- ECG_Images, Amplitude, Speed: pastas contendo informações relevantes não convertidas para texto, ou seja, as imagens recortadas do ECG (exame, velocidade e amplitude).
 - Problems e Errors: pastas criadas para registrar arquivos problemáticos, guardando-os separadamente para análise mais cuidadosa.  
   
 ## 3.0. Pré-Requisitos:
@@ -97,7 +97,7 @@ Execute o seguinte comando para anonimizar os arquivos
 
 > python anonymization.py
 
-Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv
+Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv. A pasta Exams, com os arquivos originais, ficará vazia.
 
 ### 4.2. Execute o script de processamento e extração de informações:
 Execute o script principal
