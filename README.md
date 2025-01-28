@@ -65,14 +65,14 @@ Verificar se possui o package manager uv instalado, ou acesse [aqui](https://doc
 
    Execute o seguinte comando para anonimizar os arquivos
 
-   >> python anonymization.py
+> python anonymization.py
 
    Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv. A pasta Exams, com os arquivos originais, ficará vazia.
 
 ### 4.2. Execute o script de processamento e extração de informações:
    Execute o script principal
 
->> python complete_processing.py
+> python complete_processing.py
 
    Com isso você obterá os dados extraídos de cada PDF (extract_information.csv), as pastas com imagens recortadas de cada exame (ECG_Images), recortes de amplitude e velocidade do exame (Pastas Amplitude e Speed respectivamente), arquivos com problemas para revisão manual (pastas Problems e Errors)
 
