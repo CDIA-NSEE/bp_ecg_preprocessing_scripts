@@ -6,14 +6,14 @@ Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções
 
 **2.0.** Estrutura do Repositório:   
   **2.1.** Estrutura de arquivos e pastas: 
-    📁 Exams_anonymized 
+    📁 Exams 
     📁 requirements.txt    
     📁 utils.py  
     📁 complete_processing.py  
     📁 anonymization.py  
 
   **2.2.** Descrição de funcionalidade de cada arquivo: 
-    📁 Exams_anonymized  
+    📁 Exams  
          Essa pasta deve conter os pdfs com os exames.
 
     📁 requirements.txt  
@@ -50,13 +50,15 @@ Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções
 
 **4.0.** Como Executar:  
   **4.1.** Execute o script de anonimização:  
-    Execute o seguinte comando para anonimizar os arquivos  
+    Execute o seguinte comando para anonimizar os nomes dos arquivos  
+
     '''python anonymization.py'''  
+    
     Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv  
   **4.2.** Execute o script de processamento e extração de informações:  
     Rode o script principal  
     
-    python complete_processing.py   
+    '''python complete_processing.py'''   
     
     Com isso você obterá os dados extraidos de cada PDF (extract_information.csv), pasta com iamgens recortadas decada exame (ECG_Images), recortes de amplitude e velocidade do exame (Pastas Amplitude e Speed respectivamente), arquivos com problemas para revisão manual (pastas Problems e Errors). Caso o processamento seja interrompido por algum motivo, rode o script novamente: ele continuará a partir do último pdf processado.
 
