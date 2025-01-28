@@ -2,9 +2,23 @@
 
 ## 1.0. Visão Geral:
 
+<<<<<<< HEAD
+**2.0.** Estrutura do Repositório:   
+  **2.1.** Estrutura de arquivos e pastas: 
+    📁 Exams 
+    📁 requirements.txt    
+    📁 utils.py  
+    📁 complete_processing.py  
+    📁 anonymization.py  
+
+  **2.2.** Descrição de funcionalidade de cada arquivo: 
+    📁 Exams  
+         Essa pasta deve conter os pdfs com os exames.
+=======
 Os scripts desse repositório têm como função principal tratar e organizar os exames presentes na base de dados da Benefiência Portuguesa.
 
 Sua execução é fundamental para a anonimização de cada exame, e extrair informações julgadas relevantes para as próximas etapas do projeto de pesquisa.
+>>>>>>> 2c3f173840ef7b9803b29a546865e476b7a7af2d
 
 Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções de execução dos scripts.
 
@@ -20,6 +34,21 @@ Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções
  
 ### 2.1. Descrição de funcionalidade de cada arquivo:
 
+<<<<<<< HEAD
+**4.0.** Como Executar:  
+  **4.1.** Execute o script de anonimização:  
+    Execute o seguinte comando para anonimizar os nomes dos arquivos  
+
+    '''python anonymization.py'''  
+    
+    Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv  
+  **4.2.** Execute o script de processamento e extração de informações:  
+    Rode o script principal  
+    
+    '''python complete_processing.py'''   
+    
+    Com isso você obterá os dados extraidos de cada PDF (extract_information.csv), pasta com iamgens recortadas decada exame (ECG_Images), recortes de amplitude e velocidade do exame (Pastas Amplitude e Speed respectivamente), arquivos com problemas para revisão manual (pastas Problems e Errors). Caso o processamento seja interrompido por algum motivo, rode o script novamente: ele continuará a partir do último pdf processado.
+=======
 📁 requirements.txt  
 Esse arquivo contém as bibliotecas com métodos e funções utilizados nos scripts, são elas, e suas funções:
 - pytesseract : Reconhecimento óptico de caracteres (OCR)
@@ -28,6 +57,7 @@ Esse arquivo contém as bibliotecas com métodos e funções utilizados nos scri
 - surya-ocr : Reconhecimento avançado de OCR para documentos
 - pandas : Manipulação de dados estruturados
 - matplotlib : Geração de gráficos e visualizações  
+>>>>>>> 2c3f173840ef7b9803b29a546865e476b7a7af2d
 
  
 
