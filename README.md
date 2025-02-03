@@ -1,54 +1,22 @@
 # Documentação
 
-## 1.0. Visão Geral:
+## 1.0. Visão Geral:  
 
-**2.0.** Estrutura do Repositório:   
-  **2.1.** Estrutura de arquivos e pastas: 
-  
+Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções de execução dos scripts.  
+
+## 2.0. Estrutura do Repositório:   
+  ### 2.1. Estrutura de arquivos e pastas: 
     📁 Exams 
     📁 requirements.txt    
     📁 utils.py  
     📁 complete_processing.py  
     📁 anonymization.py  
 
-  **2.2.** Descrição de funcionalidade de cada arquivo: 
-    📁 Exams  
-         Essa pasta deve conter os pdfs com os exames.
-=======
+  ### 2.2. Descrição de funcionalidade de cada arquivo:  
 
-Os scripts desse repositório têm como função principal tratar e organizar os exames presentes na base de dados da Benefiência Portuguesa.
+📁 Exams  
+   Essa pasta deve conter os pdfs com os exames.
 
-Sua execução é fundamental para a anonimização de cada exame, e extrair informações julgadas relevantes para as próximas etapas do projeto de pesquisa.
-
-Esse arquivo detalha a estrutura do repositório, pré-requisitos e instruções de execução dos scripts.
-
-## 2.0. Estrutura do Repositório:
-
-### 2.1. Estrutura de arquivos e pastas:
-
-📁 requirements.txt  
-📁 utils.py  
-📁 complete_processing.py  
-📁 anonymization.py  
-
- 
-### 2.1. Descrição de funcionalidade de cada arquivo:
-
-**4.0.** Como Executar:  
-  **4.1.** Execute o script de anonimização:  
-    Execute o seguinte comando para anonimizar os nomes dos arquivos  
-
-    '''python anonymization.py'''  
-    
-    Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv  
-  **4.2.** Execute o script de processamento e extração de informações:  
-    Rode o script principal  
-    
-    '''python complete_processing.py'''   
-    
-    Com isso você obterá os dados extraidos de cada PDF (extract_information.csv), pasta com iamgens recortadas decada exame (ECG_Images), recortes de amplitude e velocidade do exame (Pastas Amplitude e Speed respectivamente), arquivos com problemas para revisão manual (pastas Problems e Errors). Caso o processamento seja interrompido por algum motivo, rode o script novamente: ele continuará a partir do último pdf processado.
-    
-=======
 📁 requirements.txt  
 Esse arquivo contém as bibliotecas com métodos e funções utilizados nos scripts, são elas, e suas funções:
 - pillow: Manipulação de imagens.
@@ -68,7 +36,7 @@ Contém funções auxiliares criadas para auxiliar no processamento dos PDF's
 - extract_information: Extrai informações textuais específicas (data, hora, sexo, etc.) da primeira página de um PDF    
   
 📁 complete_processing.py  
-Script principal responsável por processar os dados, realizar recortes de imagens, e extrair informações textuais dos PDF's.
+Script principal responsável por processar os dados, realizar recortes de imagens, e extrair informações textuais dos PDF's.  
 Gera as seguintes saídas:
 - extract_information.csv: Arquivo .csv com todas as informações relevantes extraídas de cada exame, (["File", "Data", "Hora", "Sexo", "Data de Nascimento", "Laudo"])
 - ECG_Images, Amplitude, Speed: pastas contendo informações relevantes não convertidas para texto, ou seja, as imagens recortadas do ECG (exame, velocidade e amplitude).
