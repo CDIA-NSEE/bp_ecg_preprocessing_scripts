@@ -69,7 +69,7 @@ Verificar se possui o package manager uv instalado, ou acesse [aqui](https://doc
 
    Isso criará a nova pasta Exams_anonymized e o arquivo file_mapping.csv. A pasta Exams, com os arquivos originais, ficará vazia.
 
-### 4.2. Execute o script de processamento e extração de informações:
+### 4.3. Execute o script de processamento e extração de informações:
    Execute o script principal
 
 > python complete_processing.py
