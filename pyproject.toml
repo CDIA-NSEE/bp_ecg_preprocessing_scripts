@@ -8,4 +8,5 @@ dependencies = [
     "pandas>=2.2.3",
     "pillow>=10.4.0",
     "pymupdf>=1.25.3",
+    "tqdm>=4.67.1",
 ]
