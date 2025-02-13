@@ -1,4 +1,3 @@
-import os
 import shutil
 import logging
 import re
@@ -77,7 +76,7 @@ def process_pdf(input_path: Path, boxes: dict, error_folder: Path) -> list:
                 scale_factor = 3
                 matrix = fitz.Matrix(scale_factor, scale_factor)
                 pix = page.get_pixmap(matrix=matrix)
-                img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
 
                 x1, y1, x2, y2 = [int(i * scale_factor) for i in crop_box]
                 img.crop((x1, y1, x2, y2)).save(output_path)
