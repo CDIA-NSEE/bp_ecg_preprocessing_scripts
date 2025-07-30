@@ -10,9 +10,15 @@ ERROR_FOLDER = "Errors"
 
 # Define bounding boxes for image extraction
 BOXES = {
-    "ecg": {"output_folder": "ECG_Images", "page_number": 1, "crop_box": (230, 680, 6790, 4432)},
-    'speed': {'output_folder': 'Speed', 'page_number': 1, 'crop_box': (170, 563, 180, 570)},
-    'amplitude': {'output_folder': 'Amplitude', 'page_number': 1, 'crop_box': (264, 563, 278, 570)}
+        'ecg': {'output_folder': 'ECG', 'page_number': 1, 'crop_box': (230, 680, 6790, 4432)},
+        'report': {'output_folder': 'Report', 'page_number': 0, 'crop_box': (19, 350, 364, 600)},
+        'birthday': {'output_folder': 'Birthday', 'page_number': 0, 'crop_box': (98, 196, 142, 204)},
+        'gender': {'output_folder': 'Gender', 'page_number': 0, 'crop_box': (323, 196, 364, 204)},
+        'date': {'output_folder': 'Date', 'page_number': 0, 'crop_box': (323, 243, 365, 251)},
+        'hour': {'output_folder': 'Hour', 'page_number': 0, 'crop_box': (323, 255, 346, 263)},
+        'speed': {'output_folder': 'Speed', 'page_number': 1, 'crop_box': (170, 560, 180, 580)},
+        'amplitude': {'output_folder': 'Amplitude', 'page_number': 1, 'crop_box': (260, 560, 276, 580)},
+        'numbers': {'output_folder': 'Number', 'page_number': 1, 'crop_box': (100, 40, 200, 60)},
 }
 
 # Ensure necessary folders exist
